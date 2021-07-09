@@ -19,7 +19,7 @@ type SEKPair struct {
 	Value string `xml:"value"`
 }
 
-func getAllCrossNames() ([]CrossName, error) {
+func GetAllCrossNames() ([]CrossName, error) {
 	type Response struct {
 		Return []CrossName `xml:"return"`
 	}
@@ -63,7 +63,7 @@ func getAllCrossNames() ([]CrossName, error) {
 	return cn.Body.Response.Return, nil
 }
 
-func getInterestAndExchangeRates() ([]SEKPair, error) {
+func GetInterestAndExchangeRates() ([]SEKPair, error) {
 	fromDate := "2021-06-01"
 	toDate := "2021-06-30"
 
